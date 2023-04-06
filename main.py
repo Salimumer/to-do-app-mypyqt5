@@ -31,17 +31,21 @@ class MainWindow(qtw.QWidget):
         
         # create the combo box 
         
-        my_combo = qtw.QComboBox(self,editable=True,insertPolicy=qtw.QComboBox.InsertAtTop)
-        # add  item to combo box
+        # my_combo = qtw.QComboBox(self,editable=True,insertPolicy=qtw.QComboBox.InsertAtTop)
+        # # add  item to combo box
         
-        my_combo.addItem("port1","something")
-        my_combo.addItem("port2",2)
-        my_combo.addItem("port3",qtw.QWidget)
-        my_combo.addItem("port4")
-        my_combo.addItem("por5")
-        my_combo.addItem("port6")
-        my_combo.addItems(["one","two"])
-        my_combo.addItems(2,"Third thing")
+        # my_combo.addItem("port1","something")
+        # my_combo.addItem("port2",2)
+        # my_combo.addItem("port3",qtw.QWidget)
+        # my_combo.addItem("port4")
+        # my_combo.addItem("por5")
+        # my_combo.addItem("port6")
+        # my_combo.addItems(["one","two"])
+        # my_combo.addItems(2,"Third thing")
+        
+        
+        
+        
         # put the combo on the screen
         self.layout().addWidget(my_combo)
         
