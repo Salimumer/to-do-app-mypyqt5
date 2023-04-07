@@ -18,6 +18,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")               
         self.Add_pushButton = QtWidgets.QPushButton(self.centralwidget, clicked= lambda: self.add_it())
+        
         self.Add_pushButton.setGeometry(QtCore.QRect(10, 70, 121, 31))  #^^^^^^^^^^^^^^^^^^^^^^^^^^^  added to giving clicking function
         self.Add_pushButton.setObjectName("Add_pushButton")
         
@@ -50,27 +51,36 @@ class Ui_MainWindow(object):
         
         
         #add item to the list
-        def add_it(self):
+    def add_it(self):
             # grab from the list
-            item = self.lineEdit.text()   # in video additem_linedit instead use LineEdit
+        item = self.lineEdit.text()   # in video additem_linedit instead use LineEdit
                        # ^^^^^^^^---name of widget name present qt designer in Object name
             
             # add item to list
-            self.MY_listWidget.add.item(item)
+        self.MY_listWidget.addItem(item)
             
             
             # clear the item box
-            self.lineEdit.setText("")
+        self.lineEdit.setText("")
+        
+        
             
             
                          
         # delete Item from the list
         
-        def delete_it(self):
-            pass
+    def delete_it(self):
+        #grab the currentr row
         
-        def clear_it(self):
-            pass
+        clicked=self.MY_listWidget.currentRow()
+        self.lineEdit.setText(str(clicked))
+        
+        # delete the selected row
+        
+        self.MY_listWidget.takeItem(clicked)
+        
+    def clear_it(self):
+        self.MY_listWidget.clear()
                 
             
             
